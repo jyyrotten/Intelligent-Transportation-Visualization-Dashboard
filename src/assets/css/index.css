@@ -1,0 +1,323 @@
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 修改容器样式 */
+
+.container {
+    position: fixed;
+    width: 1920px;
+    height: 1080px;
+    left: 50%;
+    top: 50%;
+    transform-origin: left top;
+}
+
+.container.bg {
+    width: 1920px;
+    /* 固定宽度而不是100vw */
+    height: 1080px;
+    /* 固定高度而不是100vh */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* 调整main容器样式 */
+
+.main {
+    width: 1920px;
+    /* 固定宽度 */
+    height: 1080px;
+    /* 固定高度 */
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* 确保所有子组件都正确显示在视口中 */
+
+.modulefirst,
+.Barchart-container,
+.modulethird,
+.modulefourth {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    background: url(../img/bg1.png) no-repeat center;
+    width: 100%;
+    height: 100vh;
+    /* 容器的大小是内容撑起来的 */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: rgb(255, 254, 254);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header-box {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-box h2 {
+    margin-top: 3px;
+    letter-spacing: 5px;
+    transform: translateY(20px);
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    gap: 10px;
+}
+
+.main div:nth-child(1) {
+    grid-column: 1/3;
+}
+
+.main div:nth-child(2) {
+    grid-row: 2/4;
+}
+
+.modulefirst {
+    background: rgba(69, 72, 104, 0.5);
+    height: 150px;
+    transform: translateY(20px);
+}
+
+.modulefirst ul {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modulefirst ul li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid #212f39;
+    border-right: 3px solid #212f39;
+    height: 90%;
+}
+
+.modulefirst-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.modulefirst-num {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.modulefirst-unit {
+    margin-left: 10px;
+}
+
+.modulefirst ul li:nth-child(3n+1) .modulefirst-num {
+    color: #7cb0d6
+}
+
+.modulefirst ul li:nth-child(3n+2) .modulefirst-num {
+    color: #f0746b
+}
+
+.modulefirst ul li:nth-child(3n+3) .modulefirst-num {
+    color: #48dc7e
+}
+
+
+/* 轮播图 */
+
+.Barchart-container {
+    transform: translateY(-49px);
+    background-color: #2e3b45;
+    height: 450px;
+}
+
+
+/* 第三模块 */
+
+.modulethird {
+    display: flex;
+}
+
+.modulethird-left {
+    flex: 0 1 60%;
+}
+
+.modulethird-right {
+    flex: 0 1 40%;
+}
+
+
+/* 水位图 */
+
+.waterpond {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 1px;
+}
+
+.waterpond-title {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+    font-weight: 600;
+    /* 添加以下样式使文字靠近左上角 */
+    text-align: left;
+    margin: 5px 0 0 10px;
+    /* 上边距5px，左边距10px */
+}
+
+.waterpond-detail {
+    font-size: 16px;
+    padding: 0 10px;
+    font-weight: 600;
+    /* 添加以下样式使文字靠近左上角 */
+    text-align: left;
+    margin: 5px 0 0 10px;
+    /* 上边距5px，左边距10px */
+}
+
+.waterpond-detail span {
+    color: #f0746b;
+    font-size: 30px;
+}
+
+.waterpond-container {
+    height: 280px;
+    background-color: #2e3b45;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.rosechart-container {
+    height: 300px;
+    background-color: #2e3b45;
+    border-top: 2px solid rgb(70, 83, 104);
+}
+
+
+/* ModuleSecond */
+
+.main div:nth-child(3) {
+    transform: translateY(-54px);
+}
+
+
+/* 第四模块样式 */
+
+.modulefourth {
+    display: flex;
+    height: 200px;
+    position: relative;
+    top: -180px;
+    /* 相对于当前位置向下移动 */
+    right: 900px;
+    /* 相对于当前位置向右移动 */
+}
+
+.peichart h4 {
+    margin: 0;
+    /* 清除默认外边距 */
+    padding: 0;
+    /* 清除默认内边距 */
+    font-size: inherit;
+    /* 或者指定具体字体大小 */
+    font-weight: normal;
+    /* 取消默认加粗 */
+    color: #f0746b;
+    font-size: 14px;
+    position: relative;
+    top: 26px;
+    /* 调整垂直位置 */
+}
+
+.modulefourth ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    /* margin: 0;
+    padding: 0; */
+    position: relative;
+    top: -5;
+    /* 重置top值 */
+    left: 200px;
+    margin: 1px;
+}
+
+.modulefourth li {
+    list-style: none;
+    /* 确保列表项无样式 */
+}
+
+.perchertbg {
+    background-color: #2e3b45;
+    height: 180px;
+    width: 900px;
+    position: absolute;
+    /* 调整位置使元素可见 */
+    left: 35%;
+    top: 4px;
+    transform: translateX(-50%);
+    /* 修改 z-index 使其可见 */
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.modulefourth.decoration {
+    position: absolute;
+    top: 150px;
+    left: -150px;
+    z-index: 10;
+}
+
+.guangximap {
+    width: 100%;
+    height: 500px;
+    min-height: 400px;
+    position: relative;
+    /* 调整以下值来移动地图位置 */
+    top: -66px;
+    left: -150px;
+}
+
+.modulethird-right {
+    position: relative;
+    /* 调整以下值来移动地图位置 */
+    left: -230px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "vue3-project2",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@jiaminghi/charts": "^0.2.18",
+    "@jiaminghi/data-view": "^2.10.0",
+    "@kjgl77/datav-vue3": "^1.7.4",
+    "echarts": "^6.0.0",
+    "vue": "^3.5.21",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.1.7"
+  }
+}
